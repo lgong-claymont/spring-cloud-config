@@ -1,0 +1,37 @@
+server:
+  port: 9090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  main:
+    banner-mode: off
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: none    
+    show-sql: true
+    generate-ddl: true   
+    properties: 
+      hibernate:
+        jdbc:
+          lob: 
+            non_contextual_creation: true
+  datasource:    
+    initialization-mode: always
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: lgong12345 
+  
+  h2:
+    console:
+      enabled:true    
+
+logging:
+  level:
+    org:
+      springframework:ERROR
