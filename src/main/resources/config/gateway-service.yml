@@ -9,6 +9,9 @@ zuul:
       gradle-demo:
         path: /hello/**, /java8core/**
         serviceId: gradle-demo
+      jpa-postgre:
+        path: /postgres/** 
+        serviceId: jpa-postgre
 eureka:
   client:
     serviceUrl:
